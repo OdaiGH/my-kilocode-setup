@@ -1,0 +1,50 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "instructions": [
+    "When committing code: always checkout or create a 'dev' branch first, generate a meaningful conventional commit message based on the actual changes (feat/fix/refactor/chore etc), commit, then push to origin dev."
+  ],
+  "agent": {
+    "code": {
+      "model": "kilo/minimax/minimax-m2.5:free",
+      "temperature": 0.85,
+      "top_p": 0.90
+    },
+    "architect": {
+      "temperature": 1.0,
+      "top_p": 0.95
+    },
+    "debugger": {
+      "temperature": 0.75,
+      "top_p": 0.85
+    },
+    "security-audit": {
+      "temperature": 0.75,
+      "top_p": 0.85
+    },
+    "test-writer": {
+      "temperature": 0.80,
+      "top_p": 0.88
+    },
+    "code-reviewer": {
+      "temperature": 0.80,
+      "top_p": 0.88
+    },
+    "docs-writer": {
+      "temperature": 1.0,
+      "top_p": 0.95
+    }
+  },
+  "permission": {
+    "*": "ask",
+    "bash": {
+      "*": "ask",
+      "git *": "allow",
+      "npm *": "allow",
+      "rm *": "deny"
+    },
+    "edit": {
+      "*": "allow"
+    }
+  }
+}
