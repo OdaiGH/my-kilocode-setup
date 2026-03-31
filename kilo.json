@@ -7,28 +7,28 @@
   "agent": {
     "code": {
       "model": "kilo/minimax/minimax-m2.5:free",
-      "temperature": 0.85,
-      "top_p": 0.90
+      "temperature": 1.0,
+      "top_p": 0.95
     },
     "architect": {
       "temperature": 1.0,
       "top_p": 0.95
     },
     "debugger": {
-      "temperature": 0.75,
-      "top_p": 0.85
+      "temperature": 1.0,
+      "top_p": 0.95
     },
     "security-audit": {
-      "temperature": 0.75,
-      "top_p": 0.85
+      "temperature": 1.0,
+      "top_p": 0.95
     },
     "test-writer": {
-      "temperature": 0.80,
-      "top_p": 0.88
+      "temperature": 1.0,
+      "top_p": 0.95
     },
     "code-reviewer": {
-      "temperature": 0.80,
-      "top_p": 0.88
+      "temperature": 1.0,
+      "top_p": 0.95
     },
     "docs-writer": {
       "temperature": 1.0,
